@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>osxLog</title>
-</head>
-<body>
-  <div>Hello World!</div>
-</body>
-</html>
+<!-- Title of the application -->
+<h1>{{ title }}</h1>
+
+<!-- Input field for adding a book -->
+<input type="text" [(ngModel)]="bookName" placeholder="Enter book name" />
+
+<!-- Button to add the book -->
+<button (click)="addBook()">Log</button>
+
+<!-- List of books -->
+<ul>
+  <!-- Loop through each book in the books array -->
+  <li *ngFor="let book of books">
+    <!-- Display the name of the book -->
+    {{ book }}
+  </li>
+</ul>
